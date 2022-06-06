@@ -9,8 +9,8 @@ int main(void)
     for (int i = 0; i < 100; i++)
         sum += (i + 1);
 
-    cout << "ÇÕ°è : " << sum << endl;
-    cout << i << endl;      // 5·Î Ãâ·ÂµÊ
+    cout << "í•©ê³„ : " << sum << endl;
+    cout << i << endl;      // 5ë¡œ ì¶œë ¥ë¨
 
     return 0;
 }
