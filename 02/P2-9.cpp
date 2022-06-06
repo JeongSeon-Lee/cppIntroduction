@@ -1,3 +1,4 @@
+/* ÇÑ±Û */
 #include <iostream>
 using namespace std;
  
@@ -9,8 +10,8 @@ int main(void)
     for (int i = 0; i < 100; i++)
         sum += (i + 1);
 
-    cout << "í•©ê³„ : " << sum << endl;
-    cout << i << endl;      // 5ë¡œ ì¶œë ¥ë¨
+    cout << "ÇÕ°è : " << sum << endl;
+    cout << i << endl;      // 5·Î Ãâ·ÂµÊ
 
     return 0;
 }
