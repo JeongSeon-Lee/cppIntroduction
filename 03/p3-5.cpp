@@ -5,15 +5,15 @@ void SumMultiply(int *arr, int len, int &sum, int &multiply)
 {
     for (int i = 0; i < len; i++)
     {
-        sum += arr[i];
-        multiply *= arr[i];
+        sum += arr[i];      // 더하는 행위를 len번 하고 나온 값
+        multiply *= arr[i]; // 곱하는 행위를 len번 하고 나온 값
     }
 }
  
 int main(void)
 {
     int arr[5];
-    int sum=0, multiply=1;
+    int sum=0, multiply=1; //
 
     for (int i = 0; i < 5; i++)
     {
