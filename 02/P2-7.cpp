@@ -12,12 +12,15 @@ int main(void)
 
     for (int i = 0; i < 5; i++)
     {
-        *(pAry+ i) = { i, i };      // pAry[i] = { i, i };
+        // *(pAry+ i) = { i, i };      // pAry[i] = { i, i };
+        (pAry + i)->x = i;
+        (*(pAry + i)).y = i;
     }
 
     for (int i = 0; i < 5; i++)
     {
         cout << "[" << pAry[i].x << ", "<< pAry[i].y << "]" << endl;
+        // ¿À·ù) cout << "[" << pAry[i] << ", "<< pAry[i].y << "]" << endl;
     }
 
     return 0;
