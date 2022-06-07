@@ -9,8 +9,8 @@ public :
     CCircle(int a = 0, int b = 0, double r = 1) : x(a), y(b), Radius(r) { }
     double GetArea(int a) { return (3.14 * a * a); }
     void Move(int a, int b) { x += a; y += b; }
-    void Print() { cout << "Áß½É : (" << x << ", " << y << "), "
-                        << "¸éÀû : " << GetArea(Radius) << endl; } 
+    void Print() { cout << "ì¤‘ì‹¬ : (" << x << ", " << y << "), "
+                        << "ë©´ì  : " << GetArea(Radius) << endl; } 
 };
 
 int main(void)
@@ -19,7 +19,7 @@ int main(void)
     CCircle C2(1, 1);
     CCircle C3(2, 2, 2);
 
-    cout << "GetArea Å×½ºÆ® : " << C1.GetArea(10) << endl;
+    cout << "GetArea í…ŒìŠ¤íŠ¸ : " << C1.GetArea(10) << endl;
 
     C2.Move(3, 3);
 
