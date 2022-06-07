@@ -7,25 +7,17 @@ private :
 
 public :
     CPoint (int a = 0, int b = 0) : x(a), y(b) { }
-    void SetXY(int a, int b) { CPoint(a, b); }
+    void SetXY(int a, int b) { x = a; y = b; }
     int GetSumX(CPoint *ary, int count) {
         int res = 0;
-        int i;
-
-        for (i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++)
             res += ary[i].x;
-        }
-
         return res;
     }
     int GetSumY(CPoint *ary, int count) {
         int res = 0;
-        int i;
-
-        for (i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++)
             res += ary[i].y;
-        }
-
         return res;
     }
     void Print() { cout << "(" << x << ", " << y << ")"; }
@@ -37,7 +29,7 @@ int main(void)
     CPoint ary[5] = { CPoint(1, 2), CPoint(3, 4), CPoint(5, 6) };
     CPoint sum;
 
-    sum.SetXY(GetSumX(ary, 5), GetSumY(ary, 5));
+    sum.SetXY(sum.GetSumX(ary, 5), sum.GetSumY(ary, 5));
     sum.Print();
 
     return 0;
