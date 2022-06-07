@@ -11,6 +11,9 @@ private:
 public:
     CStudent(const char *str = "noname", int num = 0, int a = 0) {
         strcpy(name, str); number = num; age = a; }
+/*  CStudent(const char *str, int num, int a) { strcpy(name, str); number = num; age = a; }
+	CStudent() { strcpy(name, "noname"); number = 0; age = 0; } */
+    
     void SetName(const char *str) { strcpy(name, str); }
     void SetNumber(int num) { number = num; }
     void SetAge(int a) { age = a; }
