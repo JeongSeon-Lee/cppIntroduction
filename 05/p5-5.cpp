@@ -6,6 +6,7 @@ private :
     int ary[5];
 
 public : 
+    // CArray &GetSum(int a) { return this[a]; }
     int &GetElem(int a) { return ary[a]; }  // this[a]로 반환하면 안됨, this 포인터는 객체의 주소를 받고 객체 그대로 반환하는데 main함수에서 해당 객체는 배열이 아님
     CArray &Increase(int a) { ary[a] += 1; return (*this); }
 };
