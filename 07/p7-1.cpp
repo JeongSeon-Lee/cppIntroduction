@@ -9,9 +9,9 @@ public :
     CPoint(int a = 0, int b = 0) : x(a), y(b) { }
     CPoint Sum(const CPoint &Po) { return CPoint(x + Po.x, y + Po.y); }
     CPoint Sub(const CPoint &Po) { return CPoint(x - Po.x, y - Po.y); }
-    CPoint Invert() { return CPoint(x = -x, y = -y); }
-    CPoint Move(int a = 0, int b = 0) { return CPoint(x += a, y += b); }
-    CPoint Inc() { return CPoint(x += 1, y += 1); }
+    CPoint Invert() { return CPoint(-x, -y); }
+    CPoint Move(int a = 0, int b = 0) { return CPoint( x + a, y + b); }
+    CPoint Inc() { return CPoint(x + 1, y + 1); }
     void Print() { cout << "(" << x << ", " << y << ")" << endl; }
 };
 
