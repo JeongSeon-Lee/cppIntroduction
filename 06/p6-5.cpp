@@ -6,26 +6,26 @@ private :
     int *ary;
     int count;
 public :
-    CArray(int num) {
-        count = num;
+    CArray(int num) : count(num) {
         ary = new int[count];
         for (int i = 0; i < count; i++)
             ary[i] = i;
     }
-    CArray(const CArray &arr) {
-        count = arr.count;
+    CArray(const CArray &arr) : count(arr.count) {
         ary = new int[count];
         for (int i = 0; i < count; i++)
             ary[i] = arr.ary[i];
     }
     ~CArray() { delete [] ary; }
     CArray &Set(int a, int b) {
-        this->ary[a] = b;
-        return (*this);
+        /* this->ary[a] = b;
+        return (*this); */
+        ary[a] = b;
+        return *this;
     }
     void Print() {
-        for (int i = 0; i < this->count; i++)
-            cout << this->ary[i] << " ";
+        for (int i = 0; i < count; i++)
+            cout << /* this->ary[i] */ ary[i] << " ";
         cout << endl;
     }
 };
