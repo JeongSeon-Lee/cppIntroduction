@@ -1,8 +1,8 @@
 #include <cstdio>
 using namespace std;
 
-char *endl = "\n";
-char *tab = "\t";
+const char *endl = "\n";
+const char *tab = "\t";
 
 class ostream {
 public :
@@ -10,7 +10,7 @@ public :
         printf("%lf", val);
         return (*this);
     }
-    ostream &operator<<(char *str) {
+    ostream &operator<<(const char *str) {
         printf("%s", str);
         return (*this);
     }
@@ -22,7 +22,7 @@ public :
         scanf("%lf", &val);
         return (*this);
     }
-    istream &operator>>(char *str) {
+    istream &operator>>(const char *str) {
         scanf("%s", str);
         return (*this);
     }
@@ -34,7 +34,7 @@ istream cin;
 int main(void)
 {
     double a = 1.1, b = 2.2;
-    char *str1 = "Hi", *str2 = "Hello";
+    const char *str1 = "Hi", *str2 = "Hello";
 
     cout << a << ", " << b << endl;
     cout << "a °ª º¯°æ : ";
