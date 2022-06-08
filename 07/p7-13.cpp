@@ -16,11 +16,7 @@ public :
     }
     ~CArray() { delete [] ary; }
     int &operator[](int index) {
-        if (index == 0) return this->ary[0];
-        else if (index == 1) return this->ary[1];
-        else if (index == 2) return this->ary[2];
-        else if (index == 3) return this->ary[3];
-        else if (index == 4) return this->ary[4];
+        if (index < count) return ary[index];
         else cout << "범위 벗어남" << endl;
     }
 
