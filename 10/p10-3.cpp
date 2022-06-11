@@ -8,20 +8,20 @@ private :
 
 public :
     CPoint(T a, T b) : x(a), y(b) { };
-    template <typename T>
-    friend CPoint<T> operator+(CPoint<T> &Po1, CPoint<T> &Po2);
-    template <typename T>
-    friend ostream &operator<<(ostream &out, CPoint<T> &Po);
+    template <typename T1>
+    friend CPoint<T1> operator+(CPoint<T1> &Po1, CPoint<T1> &Po2);
+    template <typename T2>
+    friend ostream &operator<<(ostream &out, CPoint<T2> &Po);
 };
 
-template <typename T>
-CPoint<T> operator+(CPoint<T> &Po1, CPoint<T> &Po2)
+template <typename T1>
+CPoint<T1> operator+(CPoint<T1> &Po1, CPoint<T1> &Po2)
 { 
-    return CPoint<T>(Po1.x + Po2.x, Po1.y + Po2.y);
+    return CPoint<T1>(Po1.x + Po2.x, Po1.y + Po2.y);
 }
 
-template <typename T>
-ostream &operator<<(ostream &out, CPoint<T> &Po)
+template <typename T2>
+ostream &operator<<(ostream &out, CPoint<T2> &Po)
 {
     out << "(" << Po.x << ", " << Po.y << ")";
     return out;
